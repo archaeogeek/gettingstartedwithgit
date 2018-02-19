@@ -21,3 +21,4 @@ We'll hopefully get you in a position where you're familiar with the basic ideas
 # What we're not covering
 
 * GUIs for Git/GitHub
+* Specific Open Source Projects
