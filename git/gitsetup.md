@@ -8,7 +8,7 @@ These steps are global, in that they will apply for all repositories you set up 
 
 *These settings can be overridden on a per-repository basis but we won't cover that here*
 
-At your git terminal type:
+At your command prompt type:
 
 	git config --global user.name "Your name"
 	git config --global user.email "your.email@yourmailserver.com"
@@ -23,8 +23,14 @@ There are many additional settings that can be configured using git-config. For 
 
 ## Configuring Git to use the text editor of your choice
 
-By default Git will use your operating system's default editor. On Windows that's probably NotePad, on Mac it's probably Text Edit. On Linux- vi, or nano. The following command is used to set the default text editor for Git:
+By default Git will use your operating system's default editor. On Windows that's probably NotePad, on Mac it's probably Text Edit. On Linux- vim, or nano. The following command is used to set the default text editor for Git:
 
 	git config --global core.editor "/path/to/your/editorexecutable"
  	
-The exact format of the path to use here will be dependent on your operating system. [This link](http://swcarpentry.github.io/git-novice/02-setup.html) shows you how to set up the core editor config for a number of example packages in Windows, Mac and Linux.
+The exact format of the path to use here will be dependent on your operating system. [This link](http://swcarpentry.github.io/git-novice/02-setup/) shows you how to set up the core editor config for a number of example packages in Windows, Mac and Linux.
+
+## Showing the configuration set on your system
+
+The following command will show you the current values of git config on your system:
+
+    git config -l

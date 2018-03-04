@@ -2,38 +2,50 @@
 
 Folders and files are not version-controlled until we explicitly ask them to be. This process is called **initialising a repository**.
 
-Firstly we need to create a folder to hold our files. We do this at the git command prompt using the following syntax:
+Firstly we need to create a folder to hold our files. We do this at the command prompt using the following syntax (referring back to [here](../intro/introcli.md) if necessary):
 
-	mkdir -p gitrepositories/foss4gukdontbeafraid
+## Linux or Mac
 
-This creates a folder called gitrepositories and a sub-folder called foss4gukdontbeafraid in one step. 
+	mkdir -p gitrepositories/gettingstartedwithgit
+
+## Windows
+
+    mkdir gitrepositories/gettingstartedwithgit
 
 **Where is this?**
 
 If you don't specify a location for this folder, then it will use a default location as follows:
 
- * Linux: /home/yourname
- * Windows using Git Bash: C:\Users\yourname
- * Windows using GitHub Desktop: C:\Users\yourname\Documents\GitHub
- * Mac using Git from XCode: /Users/yourname
- * Mac using GitHub Desktop: 
+|OS | Location |
+|---|----------|
+|Windows using Git Bash | C:\Users\yourname |
+|Windows using GitHub Desktop | C:\Users\yourname\Documents\GitHub |
+|Linux | /home/yourname |
+|Mac using Git from XCode | /Users/yourname |
+|Mac using GitHub Desktop | /Users/yourname/Documents |
 
 
-Now change directory to foss4gukdontbeafraid:
+Now change directory to `gettingstartedwithgit`:
 
-	cd gitrepositories/foss4gukdontbeafraid
+	cd gitrepositories/gettingstartedwithgit
 
 Initialise it as a repository:
 
 	git init
 
-This might not appear to do anything but it creates a hidden folder called .git inside foss4gukdontbeafraid that contains the information Git needs to track your repository.
+This might not appear to do anything but it creates a hidden folder called `.git` inside `gettingstartedwithgit` that contains the information Git needs to track your repository.
 
 **On windows, change your folder preferences to "always view hidden folders" so you can see this folder**
 
 That's all we can do until we start adding some files and making changes to them, so let's make a file:
 
+## Mac and Linux
+
 	touch blah.txt
+
+## Windows
+
+    type nul > blah.txt
 
 This creates a blank text file called "blah.txt" in the folder.
 

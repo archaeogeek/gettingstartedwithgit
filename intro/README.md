@@ -14,6 +14,4 @@ We will work through a quick primer/reminder on command-line basics for the unin
 
 * Git- see [https://git-scm.com/book/en/v2/Getting-Started-Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for options
 
-* Hub- see [https://github.com/github/hub/releases](https://github.com/github/hub/releases)
-
 * A reasonable text editor, not Microsoft Word or Notepad. You could try [atom](https://atom.io/) if you're stuck for ideas

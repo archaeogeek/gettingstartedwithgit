@@ -1,11 +1,5 @@
 # Finding Git once it's installed
 
-## Linux
-
-Open a command prompt and type:
-
-	git
-
 
 ## Windows
 
@@ -33,6 +27,13 @@ If you're using Git via XCode or GitHub Desktop then start up terminal and type
 
 
 If this doesn't work (for example, if it prompts you to install the XCode developer tools) then close terminal, and in GitHub desktop, go to the preferences, and the advanced tab, and click the button marked "Install command line tools". You should then be able to open terminal and access the git command line as above.
+
+## Linux
+
+Open a command prompt and type:
+
+    git
+
 
 # Start Git
 
