@@ -121,7 +121,7 @@
                 <a href="intro/gitinstall.html">
             
                     
-                    Installing Git and Hub
+                    Installing Git
             
                 </a>
             
@@ -129,9 +129,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="intro/clibasics.md">
+        <li class="chapter " data-level="1.2.2" data-path="intro/introcli.html">
             
-                <span>
+                <a href="intro/introcli.html">
             
                     
                     Command-line Basics
@@ -213,12 +213,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="git/commandsummary.html">
+        <li class="chapter " data-level="1.3.4" data-path="git/disaster.html">
             
-                <a href="git/commandsummary.html">
+                <a href="git/disaster.html">
             
                     
-                    Git command summary
+                    Recovering from disaster
             
                 </a>
             
@@ -231,9 +231,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="github/README.md">
+        <li class="chapter " data-level="1.4" data-path="github/">
             
-                <span>
+                <a href="github/">
             
                     
                     GitHub
@@ -258,9 +258,22 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="fixes/simple.md">
+        <li class="chapter " data-level="1.4.2" data-path="github/cloneandfork.html">
             
-                <span>
+                <a href="github/cloneandfork.html">
+            
+                    
+                    Cloning and forking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="github/simple.html">
+            
+                <a href="github/simple.html">
             
                     
                     Simple Fixes
@@ -271,9 +284,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="fixes/pullrequests.md">
+        <li class="chapter " data-level="1.4.4" data-path="github/pullrequest.html">
             
-                <span>
+                <a href="github/pullrequest.html">
             
                     
                     Pull Requests
@@ -303,7 +316,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="extras/gitlab.md">
+        <li class="chapter " data-level="1.5.1" data-path="extras/gh-pages.md">
+            
+                <span>
+            
+                    
+                    gh-pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="extras/gitlab.md">
             
                 <span>
             
@@ -316,7 +342,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="extras/readthedocs.md">
+        <li class="chapter " data-level="1.5.3" data-path="extras/readthedocs.md">
             
                 <span>
             
@@ -344,6 +370,25 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="refs/commandsummary.html">
+            
+                <a href="refs/commandsummary.html">
+            
+                    
+                    Git command summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -394,12 +439,10 @@
                                 
                                 <h1 id="getting-started-with-git-and-github">Getting Started with Git and GitHub</h1>
 <p><strong>See online version at <a href="http://archaeogeek.github.io/gettingstartedwithgit/" target="_blank">archaeogeek.github.io/gettingstartedwithgit</a></strong></p>
-<p>This workshop is inspired by the &quot;Don&apos;t be afraid to commit&quot; workshops run at various PyCon events, and documented at <a href="http://dont-be-afraid-to-commit.readthedocs.io/en/latest/index.html#" target="_blank">readthedocs</a> but with a focus on getting you going with Git and GitHub, and submitting fixes (or pull requests). We&apos;ll also look at other repositories such as GitLab, and at integration with packages such as ReadTheDocs, which you might come across when getting into open source.</p>
-<ul>
-<li>Other repositories exist</li>
-</ul>
+<p>This workshop is inspired by the &quot;Don&apos;t be afraid to commit&quot; workshops run at various PyCon events, and documented at <a href="http://dont-be-afraid-to-commit.readthedocs.io/en/latest/index.html#" target="_blank">readthedocs</a> but with a focus on getting you going with Git and GitHub (*), and submitting minor fixes to existing projects. We&apos;ll also look at other repositories such as GitLab, and at integration with packages such as ReadTheDocs, which you might come across when getting into open source.</p>
+<p>* Other repositories exist</p>
 <h1 id="the-purpose-of-the-workshop">The purpose of the workshop</h1>
-<p>We&apos;ll hopefully get you in a position where you&apos;re familiar with the basic ideas of using Command-line Git, GitHub and submitting minor pull requests.</p>
+<p>We&apos;ll hopefully get you in a position where you&apos;re familiar with the basic concepts involved with Command-line Git, GitHub and submitting minor pull requests.</p>
 <h1 id="what-were-covering">What we&apos;re covering</h1>
 <ul>
 <li>Hands on- how to set up and use Git and GitHub</li>
@@ -410,7 +453,8 @@
 </ul>
 <h1 id="what-were-not-covering">What we&apos;re not covering</h1>
 <ul>
-<li>GUIs for Git/GitHub</li>
+<li>GUIs for Git/GitHub- too many different variants exist to easily teach in one class, and besides a bit of CLI-fu is a good thing</li>
+<li>Specific Open Source Projects</li>
 </ul>
 
                                 
@@ -451,7 +495,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Prerequisites","level":"1.2","depth":1,"path":"intro/README.md","ref":"intro/README.md","articles":[{"title":"Installing Git and Hub","level":"1.2.1","depth":2,"path":"intro/gitinstall.md","ref":"intro/gitinstall.md","articles":[]},{"title":"Command-line Basics","level":"1.2.2","depth":2,"path":"intro/clibasics.md","ref":"intro/clibasics.md","articles":[]},{"title":"Starting Git","level":"1.2.3","depth":2,"path":"intro/gitcli.md","ref":"intro/gitcli.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-02-19T15:47:16.917Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-19T17:05:49.085Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Prerequisites","level":"1.2","depth":1,"path":"intro/README.md","ref":"intro/README.md","articles":[{"title":"Installing Git","level":"1.2.1","depth":2,"path":"intro/gitinstall.md","ref":"intro/gitinstall.md","articles":[]},{"title":"Command-line Basics","level":"1.2.2","depth":2,"path":"intro/introcli.md","ref":"intro/introcli.md","articles":[]},{"title":"Starting Git","level":"1.2.3","depth":2,"path":"intro/gitcli.md","ref":"intro/gitcli.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-02-26T16:51:30.687Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>References · GitBook</title>
+        <title>Pull Requests · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="commandsummary.html" />
+    <link rel="next" href="../extras/README.md" />
     
     
-    <link rel="prev" href="../extras/readthedocs.md" />
+    <link rel="prev" href="simple.html" />
     
 
     </head>
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../github/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../github/">
+                <a href="./">
             
                     
                     GitHub
@@ -247,7 +247,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../github/github.md">
+        <li class="chapter " data-level="1.4.1" data-path="github.md">
             
                 <span>
             
@@ -260,9 +260,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../github/cloneandfork.html">
+        <li class="chapter " data-level="1.4.2" data-path="cloneandfork.html">
             
-                <a href="../github/cloneandfork.html">
+                <a href="cloneandfork.html">
             
                     
                     Cloning and forking
@@ -273,9 +273,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../github/simple.html">
+        <li class="chapter " data-level="1.4.3" data-path="simple.html">
             
-                <a href="../github/simple.html">
+                <a href="simple.html">
             
                     
                     Simple Fixes
@@ -286,9 +286,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../github/pullrequest.html">
+        <li class="chapter active" data-level="1.4.4" data-path="pullrequest.html">
             
-                <a href="../github/pullrequest.html">
+                <a href="pullrequest.html">
             
                     
                     Pull Requests
@@ -362,9 +362,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../refs/">
             
-                <a href="./">
+                <a href="../refs/">
             
                     
                     References
@@ -376,9 +376,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="commandsummary.html">
+        <li class="chapter " data-level="1.6.1" data-path="../refs/commandsummary.html">
             
-                <a href="commandsummary.html">
+                <a href="../refs/commandsummary.html">
             
                     
                     Git command summary
@@ -424,7 +424,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >References</a>
+        <a href=".." >Pull Requests</a>
     </h1>
 </div>
 
@@ -439,13 +439,56 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="references">References</h1>
+                                <h1 id="how-to-submit-a-pull-request">How to submit a pull request</h1>
+<p>If you wish to make more complex changes to the code in a remote repository then you need to go through the full process of submitting a pull request. To recap the workflow is:</p>
 <ul>
-<li><a href="http://blog.teamtreehouse.com/command-line-basics" target="_blank">Command Line Basics</a></li>
-<li><a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">DJango Girls Intro to the Command Line</a></li>
-<li><a href="https://www.learnenough.com/git-tutorial" target="_blank">Learn enough git to be dangerous (ebook)</a></li>
-<li><a href="https://www.thinkful.com/learn/github-pull-request-tutorial/" target="_blank">GitHub Pull Request Tutorial</a></li>
+<li>Fork the remote repository using your GitHub account</li>
+<li>Clone your copy of the repository to your local computer</li>
+<li>Create a new branch to work on your changes</li>
+<li>Make your changes locally, commit and push the changes to your remote copy of the repository</li>
+<li>Tell the original repository owner about your changes, or make a pull request</li>
+<li>if there are no conflicts with the original code, get your changes merged, or your pull request accepted</li>
 </ul>
+<p><strong>For simplicity&apos;s sake, if you have already cloned hipsteripsem to your local computer, delete the local copy, fork it if necessary and re-clone locally to ensure the local copy is up to date. In real life, you&apos;d need to check for changes to your local copy, ensure they were pushed to your fork on GitHub, and then rectify those changes with fresh ones from the original repository.</strong></p>
+<h2 id="forking-and-cloning-hipsteripsem">Forking and cloning hipsteripsem</h2>
+<p>Visit <a href="https://github.com/archaeogeek/foss4gukhipsteripsem" target="_blank">github.com/archaeogeek/foss4gukhipsteripsem</a> and click the &quot;fork&quot; button to make a copy of the repository under your own GitHub account.</p>
+<p><img src="../images/hipsteripsem.png" alt="Hipster Ipsem"></p>
+<p>Navigate to your copy of the repository and click the green &quot;Clone or download&quot; button. Click the clipboard next to the https clone URL to copy it.</p>
+<p><img src="../images/clone_repo.png" alt="Hipster Ipsem"></p>
+<p>At your command prompt, change to your top level git repositories directory (that we created at the start of <a href="repository.html">Creating your first local repository</a>). Type the following:</p>
+<pre><code>git clone &lt;the pasted URL&gt;
+</code></pre><p>Hit return, and this should clone your copy of the hipsteripsem repository to your local machine, in a folder called <code>foss4gukhipsteripsem</code>. </p>
+<h2 id="making-changes-locally">Making changes locally</h2>
+<p>Since it&apos;s possible that multiple people could be making changes to the original repository, it&apos;s important that your changes are isolated from the main or <strong>master</strong> branch. This allows the maintainers to keep track of changes, whilst allowing simultaneous development.</p>
+<p>At your command prompt, change directory to the root of your new repository and type the following to create a new branch and switch directly to working on it:</p>
+<pre><code>git checkout -b &lt;newbranchname&gt;
+</code></pre><p><em>Note that it&apos;s good practice to create a branch for each specific feature or fix that you work on. It should also be concise, and clearly named.</em></p>
+<p>Make your change, commit it (adding a clear and concise commit message) and push it to your local copy of the repository on GitHub. You will need to set the origin for your new branch the first time you push it up, so use the following code:</p>
+<pre><code>git push -u origin &lt;newbranchname&gt;
+</code></pre><p><strong>Again, to avoid confusion in this workshop, only make changes to the file with the number you were allocated, otherwise your request may be rejected!</strong></p>
+<h2 id="making-changes-on-github">Making changes on GitHub</h2>
+<p>Navigate to the original GitHub repository, and you should see a big green button marked &quot;Compare and pull request&quot;. </p>
+<p><img src="../images/github_pullrequest1.png" alt="GitHub Pull Request #1"></p>
+<p>Click that button and you will be taken to a page giving you the opportunity to describe your pull request and showing you the changes you have made.</p>
+<p><img src="../images/github_pullrequest2.png" alt="GitHub Pull Request #2"></p>
+<p>Write a clear and concise subject and description for your change- as the owner of the repository will use this to decide whether to accept your change. Review your changes and when you are happy click the green &quot;Create pull request button&quot;.</p>
+<p>The next page checks whether there are any conflicts with the base branch. You are given one final chance to comment on the pull request but note this is a comment to the owner and not part of the request itself.</p>
+<p><img src="../images/github_pullrequest3.png" alt="GitHub Pull Request #3"></p>
+<p>If the owner of the repository is happy with the change then they will merge it with the base branch. If they are not happy they may write a comment back to you asking you for further information or changes.</p>
+<h2 id="housekeeping">Housekeeping</h2>
+<h3 id="keeping-your-remote-repository-up-to-date">Keeping your remote repository up to date</h3>
+<p>After a while, your fork of the remote repository will no longer be up to date, and you will need to make pull requests in the other direction to merge the remote changes into your fork. </p>
+<p>Always ensure that your GitHub repository is up to date with any changes you&apos;ve made locally before you do this.</p>
+<h3 id="dealing-with-conflicts">Dealing with conflicts</h3>
+<p>GitHub will attempt to merge changes in files if it can do so automatically. In the event that it can&apos;t, it will provide you with details on how to do this yourself at the command line.</p>
+<p>If you open the conflicted file in a text editor it will show you the conflicts using special notifiers, like so:</p>
+<pre><code>This line is unchanged but
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;HEAD
+Jo edited this line
+===================
+Pete edited this line
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;MASTER
+</code></pre><p>You can manually remove the notifier lines and the incorrect line, then stage and commit your changes in the normal way.</p>
 
                                 
                                 </section>
@@ -473,12 +516,12 @@
 
             
                 
-                <a href="../extras/readthedocs.md" class="navigation navigation-prev " aria-label="Previous page: ReadTheDocs">
+                <a href="simple.html" class="navigation navigation-prev " aria-label="Previous page: Simple Fixes">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="commandsummary.html" class="navigation navigation-next " aria-label="Next page: Git command summary">
+                <a href="../extras/README.md" class="navigation navigation-next " aria-label="Next page: Extras">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -489,7 +532,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"References","level":"1.6","depth":1,"next":{"title":"Git command summary","level":"1.6.1","depth":2,"path":"refs/commandsummary.md","ref":"refs/commandsummary.md","articles":[]},"previous":{"title":"ReadTheDocs","level":"1.5.3","depth":2,"path":"extras/readthedocs.md","ref":"extras/readthedocs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"refs/README.md","mtime":"2018-02-19T16:22:02.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Pull Requests","level":"1.4.4","depth":2,"next":{"title":"Extras","level":"1.5","depth":1,"path":"extras/README.md","ref":"extras/README.md","articles":[{"title":"gh-pages","level":"1.5.1","depth":2,"path":"extras/gh-pages.md","ref":"extras/gh-pages.md","articles":[]},{"title":"Gitlab","level":"1.5.2","depth":2,"path":"extras/gitlab.md","ref":"extras/gitlab.md","articles":[]},{"title":"ReadTheDocs","level":"1.5.3","depth":2,"path":"extras/readthedocs.md","ref":"extras/readthedocs.md","articles":[]}]},"previous":{"title":"Simple Fixes","level":"1.4.3","depth":2,"path":"github/simple.md","ref":"github/simple.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github/pullrequest.md","mtime":"2018-03-04T18:57:48.299Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

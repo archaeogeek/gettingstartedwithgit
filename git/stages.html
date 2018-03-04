@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="commandsummary.html" />
+    <link rel="next" href="disaster.html" />
     
     
     <link rel="prev" href="repository.html" />
@@ -123,7 +123,7 @@
                 <a href="../intro/gitinstall.html">
             
                     
-                    Installing Git and Hub
+                    Installing Git
             
                 </a>
             
@@ -131,9 +131,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../intro/clibasics.md">
+        <li class="chapter " data-level="1.2.2" data-path="../intro/introcli.html">
             
-                <span>
+                <a href="../intro/introcli.html">
             
                     
                     Command-line Basics
@@ -215,12 +215,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="commandsummary.html">
+        <li class="chapter " data-level="1.3.4" data-path="disaster.html">
             
-                <a href="commandsummary.html">
+                <a href="disaster.html">
             
                     
-                    Git command summary
+                    Recovering from disaster
             
                 </a>
             
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../github/README.md">
+        <li class="chapter " data-level="1.4" data-path="../github/">
             
-                <span>
+                <a href="../github/">
             
                     
                     GitHub
@@ -260,9 +260,22 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../fixes/simple.md">
+        <li class="chapter " data-level="1.4.2" data-path="../github/cloneandfork.html">
             
-                <span>
+                <a href="../github/cloneandfork.html">
+            
+                    
+                    Cloning and forking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../github/simple.html">
+            
+                <a href="../github/simple.html">
             
                     
                     Simple Fixes
@@ -273,9 +286,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../fixes/pullrequests.md">
+        <li class="chapter " data-level="1.4.4" data-path="../github/pullrequest.html">
             
-                <span>
+                <a href="../github/pullrequest.html">
             
                     
                     Pull Requests
@@ -305,7 +318,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../extras/gitlab.md">
+        <li class="chapter " data-level="1.5.1" data-path="../extras/gh-pages.md">
+            
+                <span>
+            
+                    
+                    gh-pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../extras/gitlab.md">
             
                 <span>
             
@@ -318,7 +344,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../extras/readthedocs.md">
+        <li class="chapter " data-level="1.5.3" data-path="../extras/readthedocs.md">
             
                 <span>
             
@@ -346,6 +372,25 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../refs/commandsummary.html">
+            
+                <a href="../refs/commandsummary.html">
+            
+                    
+                    Git command summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -397,53 +442,80 @@
                                 <h2 id="the-three-stages-of-git">The three stages of Git</h2>
 <p>Files in a repository go through three stages before being under version control with git:</p>
 <ul>
-<li>Untracked: the file exists, but is not part of git&apos;s version control</li>
-<li>Staged: the file has been added to git&apos;s version control but changes have not been committed</li>
-<li>Committed: the change has been committed</li>
+<li><strong>Untracked</strong>: the file exists, but is not part of git&apos;s version control</li>
+<li><strong>Staged</strong>: the file has been added to git&apos;s version control but changes have not been committed</li>
+<li><strong>Committed</strong>: the change has been committed</li>
 </ul>
 <p>Git-status is used to understand what stage the files in a repository are at.</p>
 <pre><code>git status
 </code></pre><p>The output of this command not only tells you the stage of the files in your repository but also gives you some handy tips on what to do next.</p>
 <p><img src="../images/git_status1.png" alt="Git Status #1"></p>
 <h3 id="stage">Stage</h3>
-<p>So our next stage is to add our files to the staging area:</p>
+<p>So our next stage is to <strong>add</strong> our files to the staging area:</p>
 <pre><code>git add blah.txt
-</code></pre><p>If we re-run the git status command at this point the output has changed:</p>
+</code></pre><p>If we re-run the <code>git status</code> command at this point the output has changed:</p>
 <p><img src="../images/git_status2.png" alt="Git Status #2"></p>
 <h3 id="commit">Commit</h3>
 <p>The final stage is to commit the change we have made. We do this by recording a short message that explains what we did and why. This human-readable explanation will go alongside Git&apos;s own record of the change and the file structure snapshot at that point.</p>
 <pre><code>git commit
 </code></pre><p>This pops open your default text editor (depending on what you configured in your setup stage) and asks for a commit message. The screenshot below shows an example using the nano editor on linux:</p>
 <p><img src="../images/git_commit1.png" alt="Git Commit #1"></p>
-<p>Once your commit message has been saved and you are back at your git command prompt, you will see a summary of the changes git has made. Running git status again will tell you that your &quot;working directory is clean&quot;, in other words you have no untracked files or uncommitted changes:</p>
+<p>Once your commit message has been saved and you are back at your git command prompt, you will see a summary of the changes git has made. </p>
+<p>Running <code>git status</code> again will tell you that your &quot;working directory is clean&quot;, in other words you have no untracked files or uncommitted changes:</p>
 <p><img src="../images/git_commit2.png" alt="Git Commit #2"></p>
 <p><em>Note that we can shorten these steps slightly using the -m flag to the git commit statement. Staging and committing can therefore be done in one go using the following syntax:</em></p>
-<pre><code>git commit -m&quot;First commit of currently blank text file&quot;
-</code></pre><p>Also, running git log will give you a nicely formatted record of your changes:</p>
+<pre><code>git commit -m &quot;First commit of currently blank text file&quot;
+</code></pre><p>Also, running the <code>git log</code> command will give you a nicely formatted record of your changes:</p>
 <pre><code>git log
 </code></pre><p><img src="../images/git_log.png" alt="Git Log"></p>
 <p><strong>Note that long string of characters and numbers. That&apos;s an unique ID, or SHA, for that particular commit. You might sometimes need to refer to this!</strong></p>
 <p>Let&apos;s make a change to the file so we can try out some other commands...</p>
-<p>In your text editor of choice, add a line to blah.txt that says what your name is, and save the file.</p>
+<p>In your text editor of choice, add a line to <code>blah.txt</code> that says what your name is, and save the file.</p>
 <p>We can view the difference between that version of the file and the committed one (eg the changes) using the following command:</p>
 <pre><code>git diff
 </code></pre><p>This should give output similar to the following:</p>
 <p><img src="../images/git_diff.png" alt="Git Diff"></p>
 <p>Again we need to add this file to the staging area and then commit it&apos;s changes. Since the file is already in the repository, we can use another shortcut to add it and commit it in one go:</p>
-<pre><code>git commit -am&quot;Added name to blah.txt&quot;
-</code></pre><p>Running git diff again should show no changes, as the file and repository are up to date.</p>
-<p>One useful command in this section is the &quot;--amend&quot; flag for git commit, which allows you to amend the previous commit, for example to fix a spelling mistake.</p>
+<pre><code>git commit -am &quot;Added name to blah.txt&quot;
+</code></pre><p>Running <code>git diff</code> again should show no changes, as the file and repository are up to date.</p>
+<p>One useful command in this section is the <code>--amend</code> flag for <code>git commit</code>, which allows you to amend the previous commit, for example to fix a spelling mistake.</p>
 <pre><code>git commit --amend
 </code></pre><h2 id="ignoring-files">Ignoring files</h2>
 <p>There are many scenarios where you might end up with files in your repository that you don&apos;t want to place under source control. These might be backup files that text editors create, compiled python files (.pyc) or even files with sensitive information in, such as passwords. You can place these in a file called .gitignore (which will be hidden by default).</p>
 <h2 id="removing-and-renaming-files">Removing and renaming files</h2>
-<p>Git uses the unix mv (move or rename) and rm (remove) commands, but also deals with the tasks of staging and unstaging the files too.</p>
+<p>Git uses the unix <code>mv</code> (move or rename) and <code>rm</code> (remove) commands, but also deals with the tasks of staging and unstaging the files too.</p>
 <p><strong>It&apos;s important to note that you need to use a different version of the git rm (or even just rm) command depending on what you want to do</strong></p>
-<ul>
-<li>rm file # removes a file that hasn&apos;t been added to the repository yet- this will delete the file from your file system</li>
-<li>git rm file # removes the file from the repository and deletes it from your file system</li>
-<li>git rm --cached file # removes the file from the repository but doesn&apos;t delete it from your file system</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>operation</th>
+<th>consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rm &lt;file&gt;</td>
+<td>(linux or mac) removes a file that hasn&apos;t been added to the repository yet</td>
+<td>deletes the file from your file system</td>
+</tr>
+<tr>
+<td>del &lt;file&gt;</td>
+<td>(windows) removes a file that hasn&apos;t been added to the repository yet</td>
+<td>deletes the file from your file system</td>
+</tr>
+<tr>
+<td>git rm &lt;file&gt;</td>
+<td>removes the file from the repository</td>
+<td>deletes it from your file system</td>
+</tr>
+<tr>
+<td>git rm --cached &lt;file&gt;</td>
+<td>removes the file from the repository</td>
+<td>doesn&apos;t delete it from your file system</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -476,7 +548,7 @@
                 </a>
                 
                 
-                <a href="commandsummary.html" class="navigation navigation-next " aria-label="Next page: Git command summary">
+                <a href="disaster.html" class="navigation navigation-next " aria-label="Next page: Recovering from disaster">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -487,7 +559,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"The three stages of Git","level":"1.3.3","depth":2,"next":{"title":"Git command summary","level":"1.3.4","depth":2,"path":"git/commandsummary.md","ref":"git/commandsummary.md","articles":[]},"previous":{"title":"Your first repository","level":"1.3.2","depth":2,"path":"git/repository.md","ref":"git/repository.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/stages.md","mtime":"2016-06-08T17:59:21.892Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-19T17:05:49.085Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"The three stages of Git","level":"1.3.3","depth":2,"next":{"title":"Recovering from disaster","level":"1.3.4","depth":2,"path":"git/disaster.md","ref":"git/disaster.md","articles":[]},"previous":{"title":"Your first repository","level":"1.3.2","depth":2,"path":"git/repository.md","ref":"git/repository.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/stages.md","mtime":"2018-03-04T16:27:57.714Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>References · GitBook</title>
+        <title>Cloning and forking · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="commandsummary.html" />
+    <link rel="next" href="simple.html" />
     
     
-    <link rel="prev" href="../extras/readthedocs.md" />
+    <link rel="prev" href="github.md" />
     
 
     </head>
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../github/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../github/">
+                <a href="./">
             
                     
                     GitHub
@@ -247,7 +247,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../github/github.md">
+        <li class="chapter " data-level="1.4.1" data-path="github.md">
             
                 <span>
             
@@ -260,9 +260,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../github/cloneandfork.html">
+        <li class="chapter active" data-level="1.4.2" data-path="cloneandfork.html">
             
-                <a href="../github/cloneandfork.html">
+                <a href="cloneandfork.html">
             
                     
                     Cloning and forking
@@ -273,9 +273,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../github/simple.html">
+        <li class="chapter " data-level="1.4.3" data-path="simple.html">
             
-                <a href="../github/simple.html">
+                <a href="simple.html">
             
                     
                     Simple Fixes
@@ -286,9 +286,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../github/pullrequest.html">
+        <li class="chapter " data-level="1.4.4" data-path="pullrequest.html">
             
-                <a href="../github/pullrequest.html">
+                <a href="pullrequest.html">
             
                     
                     Pull Requests
@@ -362,9 +362,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../refs/">
             
-                <a href="./">
+                <a href="../refs/">
             
                     
                     References
@@ -376,9 +376,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="commandsummary.html">
+        <li class="chapter " data-level="1.6.1" data-path="../refs/commandsummary.html">
             
-                <a href="commandsummary.html">
+                <a href="../refs/commandsummary.html">
             
                     
                     Git command summary
@@ -424,7 +424,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >References</a>
+        <a href=".." >Cloning and forking</a>
     </h1>
 </div>
 
@@ -439,13 +439,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="references">References</h1>
+                                <h1 id="working-with-other-repositories">Working with other repositories</h1>
+<p>The power of GitHub is that you can not only discover lots of fascinating projects, but that you can legitimately download or <strong>clone</strong> them to your local computer, or copy (<strong>fork</strong>) them to your own GitHub repository.</p>
+<p>The approach you should take depends on what you intend to do:</p>
 <ul>
-<li><a href="http://blog.teamtreehouse.com/command-line-basics" target="_blank">Command Line Basics</a></li>
-<li><a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">DJango Girls Intro to the Command Line</a></li>
-<li><a href="https://www.learnenough.com/git-tutorial" target="_blank">Learn enough git to be dangerous (ebook)</a></li>
-<li><a href="https://www.thinkful.com/learn/github-pull-request-tutorial/" target="_blank">GitHub Pull Request Tutorial</a></li>
+<li>You just want to download it for personal use: clone</li>
+<li>You might want to contribute back changes: fork to your github repository and clone that version</li>
 </ul>
+<h2 id="cloning-a-project">Cloning a project</h2>
+<p>When signed in to GitHub click on the <strong>Explore</strong> button on the top menu. Find a project that interests you (hint, click the topics button on the right), and click the green clone button.</p>
+<p><em>If you&apos;re stuck for an idea, then clone <a href="https://github.com/templeman/awesome-ipsum" target="_blank">https://github.com/templeman/awesome-ipsum</a></em></p>
+<p>For now, choose &quot;Clone with HTTPS&quot;, and copy the provided URL to your clipboard.</p>
+<p>At your command prompt, change to your top level git repositories directory (that we created at the start of <a href="../git/repository.html">Creating your first local repository</a>). Type the following:</p>
+<pre><code>git clone &lt;the pasted URL&gt;
+</code></pre><p>Hit return, and this will clone your copy of the repository to your local machine, in a folder with the same name as the project. You can now work with your copy of the repository, making changes locally and committing them.</p>
+<h2 id="forking-a-project">Forking a project</h2>
+<p>To create your own copy of a project in your GitHub repository, navigate to one you&apos;re interested in and click the &quot;Fork&quot; button in the top right. The number next to the button shows you how many forks there already are.</p>
+<p><img src="../images/github_fork1.png" alt="Fork"></p>
+<p>After a few seconds, you will see a new copy of the repository in your GitHub repository. To use this, you should clone it to your local computer, as above.</p>
+<p>To work on this, you should follow the instructions in the previous page to add your new repository as a <strong>remote</strong> for your local copy, make changes and <strong>commit</strong> locally, before <strong>pushing</strong> to the remote.</p>
 
                                 
                                 </section>
@@ -473,12 +485,12 @@
 
             
                 
-                <a href="../extras/readthedocs.md" class="navigation navigation-prev " aria-label="Previous page: ReadTheDocs">
+                <a href="github.md" class="navigation navigation-prev " aria-label="Previous page: GitHub">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="commandsummary.html" class="navigation navigation-next " aria-label="Next page: Git command summary">
+                <a href="simple.html" class="navigation navigation-next " aria-label="Next page: Simple Fixes">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -489,7 +501,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"References","level":"1.6","depth":1,"next":{"title":"Git command summary","level":"1.6.1","depth":2,"path":"refs/commandsummary.md","ref":"refs/commandsummary.md","articles":[]},"previous":{"title":"ReadTheDocs","level":"1.5.3","depth":2,"path":"extras/readthedocs.md","ref":"extras/readthedocs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"refs/README.md","mtime":"2018-02-19T16:22:02.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cloning and forking","level":"1.4.2","depth":2,"next":{"title":"Simple Fixes","level":"1.4.3","depth":2,"path":"github/simple.md","ref":"github/simple.md","articles":[]},"previous":{"title":"GitHub","level":"1.4.1","depth":2,"path":"github/github.md","ref":"github/github.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github/cloneandfork.md","mtime":"2018-03-04T17:59:07.429Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

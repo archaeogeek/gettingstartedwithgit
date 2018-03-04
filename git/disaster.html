@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>References · GitBook</title>
+        <title>Recovering from disaster · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="commandsummary.html" />
+    <link rel="next" href="../github/" />
     
     
-    <link rel="prev" href="../extras/readthedocs.md" />
+    <link rel="prev" href="stages.html" />
     
 
     </head>
@@ -162,9 +162,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../git/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../git/">
+                <a href="./">
             
                     
                     Using Git
@@ -176,9 +176,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../git/gitsetup.html">
+        <li class="chapter " data-level="1.3.1" data-path="gitsetup.html">
             
-                <a href="../git/gitsetup.html">
+                <a href="gitsetup.html">
             
                     
                     Getting set up
@@ -189,9 +189,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../git/repository.html">
+        <li class="chapter " data-level="1.3.2" data-path="repository.html">
             
-                <a href="../git/repository.html">
+                <a href="repository.html">
             
                     
                     Your first repository
@@ -202,9 +202,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../git/stages.html">
+        <li class="chapter " data-level="1.3.3" data-path="stages.html">
             
-                <a href="../git/stages.html">
+                <a href="stages.html">
             
                     
                     The three stages of Git
@@ -215,9 +215,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../git/disaster.html">
+        <li class="chapter active" data-level="1.3.4" data-path="disaster.html">
             
-                <a href="../git/disaster.html">
+                <a href="disaster.html">
             
                     
                     Recovering from disaster
@@ -362,9 +362,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../refs/">
             
-                <a href="./">
+                <a href="../refs/">
             
                     
                     References
@@ -376,9 +376,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="commandsummary.html">
+        <li class="chapter " data-level="1.6.1" data-path="../refs/commandsummary.html">
             
-                <a href="commandsummary.html">
+                <a href="../refs/commandsummary.html">
             
                     
                     Git command summary
@@ -424,7 +424,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >References</a>
+        <a href=".." >Recovering from disaster</a>
     </h1>
 </div>
 
@@ -439,14 +439,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="references">References</h1>
-<ul>
-<li><a href="http://blog.teamtreehouse.com/command-line-basics" target="_blank">Command Line Basics</a></li>
-<li><a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">DJango Girls Intro to the Command Line</a></li>
-<li><a href="https://www.learnenough.com/git-tutorial" target="_blank">Learn enough git to be dangerous (ebook)</a></li>
-<li><a href="https://www.thinkful.com/learn/github-pull-request-tutorial/" target="_blank">GitHub Pull Request Tutorial</a></li>
-</ul>
-
+                                <h1 id="recovering-from-disaster">Recovering from disaster</h1>
+<p>Git provides a number of ways of recovering from disaster, aka undoing changes to your repository. We won&apos;t go into too much detail here as it&apos;s all rather more complicated than we have time for!</p>
+<p>In all cases, you will need to know the SHA ID for the a commit, found by running the <code>git log</code> command. You can get a shorter (7 character) version of the SHA, which is equally valid, by appending <code>--abbrev-commit</code> to the command, as follows:</p>
+<pre><code>git log --abbrev-commit
+</code></pre><h2 id="git-checkout">git checkout</h2>
+<p>This allows you to <strong>view</strong> the repository at a particular point in time, or commit:</p>
+<pre><code>git checkout &lt;sha&gt;
+</code></pre><p>It does not replace your current working state, you can get back to that with:</p>
+<pre><code>git checkout &lt;branchname&gt;
+</code></pre><p>To continue working on the repository from the position of the commit you have gone back to:</p>
+<pre><code>git checkout &lt;sha&gt;
+git checkout -b newbranchname
+</code></pre><p><strong>At this point, in this branch, the subsequent work no longer exists</strong></p>
+<h2 id="git-clean">git clean</h2>
+<p>This allows you to &quot;tidy&quot; a repository by deleting untracked files. To see what it will do before it actually does it, add the <code>-n</code> option, which performs a dry-run:</p>
+<pre><code>git clean -n
+</code></pre><p><em>Note that <code>-n</code> can be used after most git commands to give you a dry-run of what the command will actually do</em></p>
+<h2 id="git-revert">git revert</h2>
+<p>This allows you to undo changes to your commit history by adding a new commit, which is equivalent to the &quot;inverse&quot; of the one referred to in the command:</p>
+<pre><code>git revert &lt;sha&gt;
+</code></pre><h2 id="git-reset">git reset</h2>
+<p>This undoes changes to your commit history but also modifies the file system and staging index, depending on the way git reset is invoked.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git reset --soft &lt;sha&gt;</td>
+<td>The contents of the staging index and file system are unchanged</td>
+</tr>
+<tr>
+<td>git reset --mixed &lt;sha&gt;</td>
+<td>Resets the staging index but leaving the working directory unchanged</td>
+</tr>
+<tr>
+<td>git reset --hard &lt;sha&gt;</td>
+<td>Resets the staging index and the working directory back to the state of the specified commit</td>
+</tr>
+</tbody>
+</table>
+<p>Of these options <code>git reset --hard &lt;sha&gt;</code> is the most dangerous and commonly used invokation. It is most commonly used to return everything (commit history, staging index and file system) back to the state it was in before the most recent commit, with:</p>
+<pre><code>git reset --hard HEAD^
+</code></pre>
                                 
                                 </section>
                             
@@ -473,12 +512,12 @@
 
             
                 
-                <a href="../extras/readthedocs.md" class="navigation navigation-prev " aria-label="Previous page: ReadTheDocs">
+                <a href="stages.html" class="navigation navigation-prev " aria-label="Previous page: The three stages of Git">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="commandsummary.html" class="navigation navigation-next " aria-label="Next page: Git command summary">
+                <a href="../github/" class="navigation navigation-next " aria-label="Next page: GitHub">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -489,7 +528,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"References","level":"1.6","depth":1,"next":{"title":"Git command summary","level":"1.6.1","depth":2,"path":"refs/commandsummary.md","ref":"refs/commandsummary.md","articles":[]},"previous":{"title":"ReadTheDocs","level":"1.5.3","depth":2,"path":"extras/readthedocs.md","ref":"extras/readthedocs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"refs/README.md","mtime":"2018-02-19T16:22:02.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Recovering from disaster","level":"1.3.4","depth":2,"next":{"title":"GitHub","level":"1.4","depth":1,"path":"github/README.md","ref":"github/README.md","articles":[{"title":"GitHub","level":"1.4.1","depth":2,"path":"github/github.md","ref":"github/github.md","articles":[]},{"title":"Cloning and forking","level":"1.4.2","depth":2,"path":"github/cloneandfork.md","ref":"github/cloneandfork.md","articles":[]},{"title":"Simple Fixes","level":"1.4.3","depth":2,"path":"github/simple.md","ref":"github/simple.md","articles":[]},{"title":"Pull Requests","level":"1.4.4","depth":2,"path":"github/pullrequest.md","ref":"github/pullrequest.md","articles":[]}]},"previous":{"title":"The three stages of Git","level":"1.3.3","depth":2,"path":"git/stages.md","ref":"git/stages.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/disaster.md","mtime":"2018-03-04T17:17:29.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

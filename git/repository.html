@@ -123,7 +123,7 @@
                 <a href="../intro/gitinstall.html">
             
                     
-                    Installing Git and Hub
+                    Installing Git
             
                 </a>
             
@@ -131,9 +131,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../intro/clibasics.md">
+        <li class="chapter " data-level="1.2.2" data-path="../intro/introcli.html">
             
-                <span>
+                <a href="../intro/introcli.html">
             
                     
                     Command-line Basics
@@ -215,12 +215,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="commandsummary.html">
+        <li class="chapter " data-level="1.3.4" data-path="disaster.html">
             
-                <a href="commandsummary.html">
+                <a href="disaster.html">
             
                     
-                    Git command summary
+                    Recovering from disaster
             
                 </a>
             
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../github/README.md">
+        <li class="chapter " data-level="1.4" data-path="../github/">
             
-                <span>
+                <a href="../github/">
             
                     
                     GitHub
@@ -260,9 +260,22 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../fixes/simple.md">
+        <li class="chapter " data-level="1.4.2" data-path="../github/cloneandfork.html">
             
-                <span>
+                <a href="../github/cloneandfork.html">
+            
+                    
+                    Cloning and forking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../github/simple.html">
+            
+                <a href="../github/simple.html">
             
                     
                     Simple Fixes
@@ -273,9 +286,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../fixes/pullrequests.md">
+        <li class="chapter " data-level="1.4.4" data-path="../github/pullrequest.html">
             
-                <span>
+                <a href="../github/pullrequest.html">
             
                     
                     Pull Requests
@@ -305,7 +318,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../extras/gitlab.md">
+        <li class="chapter " data-level="1.5.1" data-path="../extras/gh-pages.md">
+            
+                <span>
+            
+                    
+                    gh-pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../extras/gitlab.md">
             
                 <span>
             
@@ -318,7 +344,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../extras/readthedocs.md">
+        <li class="chapter " data-level="1.5.3" data-path="../extras/readthedocs.md">
             
                 <span>
             
@@ -346,6 +372,25 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../refs/commandsummary.html">
+            
+                <a href="../refs/commandsummary.html">
+            
+                    
+                    Git command summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -396,26 +441,54 @@
                                 
                                 <h1 id="creating-your-first-local-repository">Creating your first local repository</h1>
 <p>Folders and files are not version-controlled until we explicitly ask them to be. This process is called <strong>initialising a repository</strong>.</p>
-<p>Firstly we need to create a folder to hold our files. We do this at the git command prompt using the following syntax:</p>
-<pre><code>mkdir -p gitrepositories/foss4gukdontbeafraid
-</code></pre><p>This creates a folder called gitrepositories and a sub-folder called foss4gukdontbeafraid in one step. </p>
-<p><strong>Where is this?</strong></p>
+<p>Firstly we need to create a folder to hold our files. We do this at the command prompt using the following syntax (referring back to <a href="../intro/introcli.html">here</a> if necessary):</p>
+<h2 id="linux-or-mac">Linux or Mac</h2>
+<pre><code>mkdir -p gitrepositories/gettingstartedwithgit
+</code></pre><h2 id="windows">Windows</h2>
+<pre><code>mkdir gitrepositories/gettingstartedwithgit
+</code></pre><p><strong>Where is this?</strong></p>
 <p>If you don&apos;t specify a location for this folder, then it will use a default location as follows:</p>
-<ul>
-<li>Linux: /home/yourname</li>
-<li>Windows using Git Bash: C:\Users\yourname</li>
-<li>Windows using GitHub Desktop: C:\Users\yourname\Documents\GitHub</li>
-<li>Mac using Git from XCode: /Users/yourname</li>
-<li>Mac using GitHub Desktop: </li>
-</ul>
-<p>Now change directory to foss4gukdontbeafraid:</p>
-<pre><code>cd gitrepositories/foss4gukdontbeafraid
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows using Git Bash</td>
+<td>C:\Users\yourname</td>
+</tr>
+<tr>
+<td>Windows using GitHub Desktop</td>
+<td>C:\Users\yourname\Documents\GitHub</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>/home/yourname</td>
+</tr>
+<tr>
+<td>Mac using Git from XCode</td>
+<td>/Users/yourname</td>
+</tr>
+<tr>
+<td>Mac using GitHub Desktop</td>
+<td>/Users/yourname/Documents</td>
+</tr>
+</tbody>
+</table>
+<p>Now change directory to <code>gettingstartedwithgit</code>:</p>
+<pre><code>cd gitrepositories/gettingstartedwithgit
 </code></pre><p>Initialise it as a repository:</p>
 <pre><code>git init
-</code></pre><p>This might not appear to do anything but it creates a hidden folder called .git inside foss4gukdontbeafraid that contains the information Git needs to track your repository.</p>
+</code></pre><p>This might not appear to do anything but it creates a hidden folder called <code>.git</code> inside <code>gettingstartedwithgit</code> that contains the information Git needs to track your repository.</p>
 <p><strong>On windows, change your folder preferences to &quot;always view hidden folders&quot; so you can see this folder</strong></p>
 <p>That&apos;s all we can do until we start adding some files and making changes to them, so let&apos;s make a file:</p>
+<h2 id="mac-and-linux">Mac and Linux</h2>
 <pre><code>touch blah.txt
+</code></pre><h2 id="windows">Windows</h2>
+<pre><code>type nul &gt; blah.txt
 </code></pre><p>This creates a blank text file called &quot;blah.txt&quot; in the folder.</p>
 <p>At this point, we have enough in place to start committing to our repository.</p>
 
@@ -461,7 +534,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Your first repository","level":"1.3.2","depth":2,"next":{"title":"The three stages of Git","level":"1.3.3","depth":2,"path":"git/stages.md","ref":"git/stages.md","articles":[]},"previous":{"title":"Getting set up","level":"1.3.1","depth":2,"path":"git/gitsetup.md","ref":"git/gitsetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/repository.md","mtime":"2016-06-13T22:32:22.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-19T17:05:49.085Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Your first repository","level":"1.3.2","depth":2,"next":{"title":"The three stages of Git","level":"1.3.3","depth":2,"path":"git/stages.md","ref":"git/stages.md","articles":[]},"previous":{"title":"Getting set up","level":"1.3.1","depth":2,"path":"git/gitsetup.md","ref":"git/gitsetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/repository.md","mtime":"2018-03-04T16:17:34.442Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>References · GitBook</title>
+        <title>Command-line Basics · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="commandsummary.html" />
+    <link rel="next" href="gitcli.html" />
     
     
-    <link rel="prev" href="../extras/readthedocs.md" />
+    <link rel="prev" href="gitinstall.html" />
     
 
     </head>
@@ -104,9 +104,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../intro/">
+        <li class="chapter " data-level="1.2" data-path="./">
             
-                <a href="../intro/">
+                <a href="./">
             
                     
                     Prerequisites
@@ -118,9 +118,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../intro/gitinstall.html">
+        <li class="chapter " data-level="1.2.1" data-path="gitinstall.html">
             
-                <a href="../intro/gitinstall.html">
+                <a href="gitinstall.html">
             
                     
                     Installing Git
@@ -131,9 +131,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../intro/introcli.html">
+        <li class="chapter active" data-level="1.2.2" data-path="introcli.html">
             
-                <a href="../intro/introcli.html">
+                <a href="introcli.html">
             
                     
                     Command-line Basics
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../intro/gitcli.html">
+        <li class="chapter " data-level="1.2.3" data-path="gitcli.html">
             
-                <a href="../intro/gitcli.html">
+                <a href="gitcli.html">
             
                     
                     Starting Git
@@ -362,9 +362,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../refs/">
             
-                <a href="./">
+                <a href="../refs/">
             
                     
                     References
@@ -376,9 +376,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="commandsummary.html">
+        <li class="chapter " data-level="1.6.1" data-path="../refs/commandsummary.html">
             
-                <a href="commandsummary.html">
+                <a href="../refs/commandsummary.html">
             
                     
                     Git command summary
@@ -424,7 +424,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >References</a>
+        <a href=".." >Command-line Basics</a>
     </h1>
 </div>
 
@@ -439,13 +439,126 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="references">References</h1>
-<ul>
-<li><a href="http://blog.teamtreehouse.com/command-line-basics" target="_blank">Command Line Basics</a></li>
-<li><a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">DJango Girls Intro to the Command Line</a></li>
-<li><a href="https://www.learnenough.com/git-tutorial" target="_blank">Learn enough git to be dangerous (ebook)</a></li>
-<li><a href="https://www.thinkful.com/learn/github-pull-request-tutorial/" target="_blank">GitHub Pull Request Tutorial</a></li>
-</ul>
+                                <h1 id="command-line-primer">Command-line Primer</h1>
+<h2 id="whats-the-command-line">What&apos;s the Command-Line?</h2>
+<p>Aka, <strong>Terminal</strong> on the Mac or Linux, <strong>cmd</strong> or <strong>Cygwin</strong> on windows. Might also be called <strong>Command Prompt</strong>, <strong>CLI</strong>, <strong>Bash</strong>, <strong>DOS</strong>...</p>
+<p>We will call it the Command Prompt throughout this workshop.</p>
+<h2 id="windows">Windows</h2>
+<p>Start -&gt; Windows System -&gt; Command Prompt</p>
+<p>Looks like:</p>
+<pre><code>somethingsomething &gt;
+</code></pre><h2 id="mac">Mac</h2>
+<p>Applications -&gt; Utilities -&gt; Terminal</p>
+<p>Looks like:</p>
+<pre><code>somethingsomething $
+</code></pre><h2 id="linux-ubuntu">Linux (Ubuntu)</h2>
+<p>Accesssories -&gt; Terminal</p>
+<p>Looks like:</p>
+<pre><code>somethingsomething $
+</code></pre><h2 id="basic-usage">Basic Usage</h2>
+<p>To the left of the prompt symbol (indicated by <code>somethingsomething</code> above) will be helper info, which may differ from install to install. Generally it will tell you which directory you are in, possibly which user you are. It can even be configured to tell you which git branch you are in. </p>
+<p>The prompt symbol will not be included in the commands you follow in this workshop. When typing a command, assume you are starting to the right of the prompt above. </p>
+<p>All commands have the following format, where options and arguments are not always required. This is indicated by the square brackets around them- these are not part of the command:</p>
+<pre><code>commandname [options] [arguments]
+</code></pre><p>They are finished, or submitted, with the return or enter key on your keyboard.</p>
+<p>For example, a command with no options or arguments is:</p>
+<pre><code>whoami
+</code></pre><p>Type this and press enter- it will respond with your username.</p>
+<p>A command with an argument is:</p>
+<pre><code>mkdir dirname
+</code></pre><p>This will create a new folder with the name <code>dirname</code> in the current working directory.</p>
+<h2 id="directory-notation">Directory Notation</h2>
+<p>This is done differently in Windows compared to Mac and Linux. Mac and Linux do not use drive letters, and use a <strong>forward slash</strong> to denote directories. Windows uses drive letters, and a <strong>back slash</strong>.</p>
+<h3 id="windows">Windows</h3>
+<pre><code>C:\Users\Jo\mydocs
+</code></pre><h3 id="mac-and-linux">Mac and Linux</h3>
+<pre><code>/Users/Jo/mydocs
+</code></pre><h2 id="caution">Caution</h2>
+<p>Many commands are slightly different in Windows, compared to Mac and Linux. For example the following commands do the same thing, which is to print the contents (files and folders) in the current directory:</p>
+<h3 id="windows">Windows</h3>
+<pre><code>dir
+</code></pre><h3 id="mac-or-linux">Mac or Linux</h3>
+<pre><code>ls
+</code></pre><p>In some cases, the same command behaves differently in Windows compared to Mac and Linux. For example the following variation on the <code>mkdir</code> command above will create the following structure in all cases:</p>
+<pre><code>dir1
+....dir2
+........dir3
+</code></pre><h3 id="windows">Windows</h3>
+<pre><code>mkdir dir1\dir2\dir3
+</code></pre><h3 id="mac-and-linux">Mac and Linux</h3>
+<pre><code>mkdir -p dir1\dir2\dir3
+</code></pre><h2 id="navigation">Navigation</h2>
+<p><strong>Backspace</strong> clears text in an un-submitted command</p>
+<p><strong>Tab</strong> autocompletes a command or directory structure (where possible)</p>
+<p><strong>Up and Down Arrows</strong> cycle through the current command history</p>
+<h2 id="summary-of-useful-commands">Summary of Useful Commands</h2>
+<p>(Copied from <a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">https://tutorial.djangogirls.org/en/intro_to_command_line/</a>)</p>
+<table>
+<thead>
+<tr>
+<th>Command (Windows)</th>
+<th>Command (Mac OS / Linux)</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>exit</td>
+<td>exit</td>
+<td>close the window</td>
+<td>exit</td>
+</tr>
+<tr>
+<td>cd</td>
+<td>cd</td>
+<td>change directory</td>
+<td>cd test</td>
+</tr>
+<tr>
+<td>cd</td>
+<td>pwd</td>
+<td>show the current directory</td>
+<td>cd (Windows) or pwd (Mac OS / Linux)</td>
+</tr>
+<tr>
+<td>dir</td>
+<td>ls</td>
+<td>list directories/files</td>
+<td>dir</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>cp</td>
+<td>copy file</td>
+<td>copy c:\test\test.txt c:\windows\test.txt</td>
+</tr>
+<tr>
+<td>move</td>
+<td>mv</td>
+<td>move file</td>
+<td>move c:\test\test.txt c:\windows\test.txt</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td>mkdir</td>
+<td>create a new directory</td>
+<td>mkdir testdirectory</td>
+</tr>
+<tr>
+<td>rmdir (or del)</td>
+<td>rm</td>
+<td>delete a file</td>
+<td>del c:\test\test.txt</td>
+</tr>
+<tr>
+<td>rmdir /S</td>
+<td>rm -r</td>
+<td>delete a directory</td>
+<td>rm -r testdirectory</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -473,12 +586,12 @@
 
             
                 
-                <a href="../extras/readthedocs.md" class="navigation navigation-prev " aria-label="Previous page: ReadTheDocs">
+                <a href="gitinstall.html" class="navigation navigation-prev " aria-label="Previous page: Installing Git">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="commandsummary.html" class="navigation navigation-next " aria-label="Next page: Git command summary">
+                <a href="gitcli.html" class="navigation navigation-next " aria-label="Next page: Starting Git">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -489,7 +602,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"References","level":"1.6","depth":1,"next":{"title":"Git command summary","level":"1.6.1","depth":2,"path":"refs/commandsummary.md","ref":"refs/commandsummary.md","articles":[]},"previous":{"title":"ReadTheDocs","level":"1.5.3","depth":2,"path":"extras/readthedocs.md","ref":"extras/readthedocs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"refs/README.md","mtime":"2018-02-19T16:22:02.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Command-line Basics","level":"1.2.2","depth":2,"next":{"title":"Starting Git","level":"1.2.3","depth":2,"path":"intro/gitcli.md","ref":"intro/gitcli.md","articles":[]},"previous":{"title":"Installing Git","level":"1.2.1","depth":2,"path":"intro/gitinstall.md","ref":"intro/gitinstall.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"intro/introcli.md","mtime":"2018-02-19T16:46:00.171Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

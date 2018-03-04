@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>References · GitBook</title>
+        <title>GitHub · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="commandsummary.html" />
+    <link rel="next" href="github.md" />
     
     
-    <link rel="prev" href="../extras/readthedocs.md" />
+    <link rel="prev" href="../git/disaster.html" />
     
 
     </head>
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../github/">
+        <li class="chapter active" data-level="1.4" data-path="./">
             
-                <a href="../github/">
+                <a href="./">
             
                     
                     GitHub
@@ -247,7 +247,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../github/github.md">
+        <li class="chapter " data-level="1.4.1" data-path="github.md">
             
                 <span>
             
@@ -260,9 +260,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../github/cloneandfork.html">
+        <li class="chapter " data-level="1.4.2" data-path="cloneandfork.html">
             
-                <a href="../github/cloneandfork.html">
+                <a href="cloneandfork.html">
             
                     
                     Cloning and forking
@@ -273,9 +273,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../github/simple.html">
+        <li class="chapter " data-level="1.4.3" data-path="simple.html">
             
-                <a href="../github/simple.html">
+                <a href="simple.html">
             
                     
                     Simple Fixes
@@ -286,9 +286,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../github/pullrequest.html">
+        <li class="chapter " data-level="1.4.4" data-path="pullrequest.html">
             
-                <a href="../github/pullrequest.html">
+                <a href="pullrequest.html">
             
                     
                     Pull Requests
@@ -362,9 +362,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../refs/">
             
-                <a href="./">
+                <a href="../refs/">
             
                     
                     References
@@ -376,9 +376,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="commandsummary.html">
+        <li class="chapter " data-level="1.6.1" data-path="../refs/commandsummary.html">
             
-                <a href="commandsummary.html">
+                <a href="../refs/commandsummary.html">
             
                     
                     Git command summary
@@ -424,7 +424,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >References</a>
+        <a href=".." >GitHub</a>
     </h1>
 </div>
 
@@ -439,13 +439,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="references">References</h1>
+                                <h1 id="introduction-to-github">Introduction to GitHub</h1>
+<p>GitHub is an online platform (&quot;hub!&quot;) where people can store their git repositories, allowing other users to collaborate with them, or simply download their files.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>If you haven&apos;t done so already, you need to create an account on GitHub and sign in at <a href="http://github.com" target="_blank">github.com</a>.</p>
+<p>The current GitHub sign in page looks like this:</p>
+<p><img src="../images/github_signin.png" alt="GitHub"></p>
+<p><strong>Tip: Enable two-factor authentication in your account for better security</strong></p>
+<p><em>If you&apos;re comfortable with SSH then add your SSH key to your account profile for secure committing without your password. For the purposes of this tutorial we will use https instead.</em></p>
+<h2 id="working-with-remote-repositories">Working with remote repositories</h2>
+<p>So now we know how to work with repositories on our local file system. How do we host our repository on GitHub?</p>
+<p>Online versions of repositories are generally known as <strong>remotes</strong>, and the process of uploading code to a remote is known as a <strong>push</strong>.</p>
+<p>The basic workflow is:</p>
 <ul>
-<li><a href="http://blog.teamtreehouse.com/command-line-basics" target="_blank">Command Line Basics</a></li>
-<li><a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">DJango Girls Intro to the Command Line</a></li>
-<li><a href="https://www.learnenough.com/git-tutorial" target="_blank">Learn enough git to be dangerous (ebook)</a></li>
-<li><a href="https://www.thinkful.com/learn/github-pull-request-tutorial/" target="_blank">GitHub Pull Request Tutorial</a></li>
+<li>Create a new repository for your code on GitHub</li>
+<li>Add this as a remote for your local repository</li>
+<li>Make changes to your local repository and commit them as usual</li>
+<li>Push your changes to the remote</li>
 </ul>
+<h2 id="creating-a-repository-on-github">Creating a repository on GitHub</h2>
+<p>Go to the repository tab on your home page and click the green &quot;New&quot; button.</p>
+<p><img src="../images/github_newrepo.png" alt="GitHub New Repo"></p>
+<p>Give your repository a useful name and description. You&apos;ll need to leave it as a public repository (private repositories are currently only available with a paid-for plan). For the purposes of this workshop, leave the option to initialise the repository with a README unticked, and don&apos;t select a .gitignore file or license. Then click the big green &quot;Create Repository&quot; button. </p>
+<p><img src="../images/github_newrepo2.png" alt="GitHub New Repo #2"></p>
+<p>The final stage provides you with the command line instructions you need for adding the GitHub repository as a remote for your local copy. </p>
+<p><em>Note the option to switch between ssh and https, and how this changes the address for the repository. Stick with https for now</em></p>
+<p>We&apos;ll add this repository as a remote for the repository we created earlier, so follow the instructions in the second box, titled &quot;... or push an existing repository from the command line&quot;.</p>
+<p><img src="../images/github_newrepo3.png" alt="GitHub New Repo #3"></p>
+<p>In our repository folder that we created earlier, type the following commands, substituting your GitHub username and the repository name into the appropriate places:</p>
+<pre><code>git remote add origin https://github.com/&lt;yourusename&gt;/&lt;yourreponame&gt;.git
+git push -u origin master
+</code></pre><p><em>The term &quot;master&quot; refers to the default or master branch in the repository. Branches are effectively self-contained copies of the files in the project that can be merged together when required. They are often used for development and stable versions of source code. We&apos;ll discuss them briefly later but see the <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell" target="_blank">documentation</a> for more detail.</em></p>
+<p>Go back to <a href="repository.html">Creating your first local repository</a> and practice making some more changes to your local repository, then use <code>git push</code> to push them to the remote repository. Now you might see the value of good commit messages, as these are fully visible in your repository!</p>
+<p><em>Note that once you have set the master branch you don&apos;t need to use the full &quot;-u origin master&quot; statement. Just &quot;git push&quot; will do</em></p>
 
                                 
                                 </section>
@@ -473,12 +499,12 @@
 
             
                 
-                <a href="../extras/readthedocs.md" class="navigation navigation-prev " aria-label="Previous page: ReadTheDocs">
+                <a href="../git/disaster.html" class="navigation navigation-prev " aria-label="Previous page: Recovering from disaster">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="commandsummary.html" class="navigation navigation-next " aria-label="Next page: Git command summary">
+                <a href="github.md" class="navigation navigation-next " aria-label="Next page: GitHub">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -489,7 +515,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"References","level":"1.6","depth":1,"next":{"title":"Git command summary","level":"1.6.1","depth":2,"path":"refs/commandsummary.md","ref":"refs/commandsummary.md","articles":[]},"previous":{"title":"ReadTheDocs","level":"1.5.3","depth":2,"path":"extras/readthedocs.md","ref":"extras/readthedocs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"refs/README.md","mtime":"2018-02-19T16:22:02.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GitHub","level":"1.4","depth":1,"next":{"title":"GitHub","level":"1.4.1","depth":2,"path":"github/github.md","ref":"github/github.md","articles":[]},"previous":{"title":"Recovering from disaster","level":"1.3.4","depth":2,"path":"git/disaster.md","ref":"git/disaster.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github/README.md","mtime":"2018-03-04T17:27:37.229Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

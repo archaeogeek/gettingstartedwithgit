@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>References · GitBook</title>
+        <title>Git command summary · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="commandsummary.html" />
     
-    
-    <link rel="prev" href="../extras/readthedocs.md" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -362,7 +360,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="./">
             
                 <a href="./">
             
@@ -376,7 +374,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="commandsummary.html">
+        <li class="chapter active" data-level="1.6.1" data-path="commandsummary.html">
             
                 <a href="commandsummary.html">
             
@@ -424,7 +422,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >References</a>
+        <a href=".." >Git command summary</a>
     </h1>
 </div>
 
@@ -439,12 +437,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="references">References</h1>
+                                <h1 id="git-command-summary">Git Command Summary</h1>
 <ul>
-<li><a href="http://blog.teamtreehouse.com/command-line-basics" target="_blank">Command Line Basics</a></li>
-<li><a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">DJango Girls Intro to the Command Line</a></li>
-<li><a href="https://www.learnenough.com/git-tutorial" target="_blank">Learn enough git to be dangerous (ebook)</a></li>
-<li><a href="https://www.thinkful.com/learn/github-pull-request-tutorial/" target="_blank">GitHub Pull Request Tutorial</a></li>
+<li><strong>git init</strong> <em>initialise a repository</em></li>
+<li><strong>git add <file></file></strong> <em>add a file to the staging area</em></li>
+<li><strong>git commit</strong> <em>commit changes to the repository</em><ul>
+<li><strong>-a</strong> <em>automatically stage existing files</em></li>
+<li><strong>-m</strong> <em>add commit message directly</em></li>
+</ul>
+</li>
+<li><strong> git log</strong> <em>show changes in commits</em></li>
+<li><strong>git diff</strong> <em>compare repository with last commit</em></li>
+<li><strong>git mv</strong> <em>rename files in filesystem and repository</em></li>
+<li><strong>git rm</strong> <em>remove files in filesystem and repository</em><ul>
+<li><strong>--cached</strong> <em>remove files from repository but not filesystem</em></li>
+</ul>
+</li>
+<li><strong>git checkout &lt;sha&gt;</strong> <em>checkout a previous commit referenced by &lt;sha&gt;</em></li>
+<li><strong>git clean</strong> delete untracked files from your repository<ul>
+<li><strong>-n</strong> do a dry-run without actually deleting</li>
+</ul>
+</li>
+<li><strong>git revert &lt;sha&gt;</strong> <em>undo changes to a commit history by creating a new commit, which is the inverse of &lt;sha&gt;</em></li>
+<li><strong>git reset</strong> <em>Undo changes to your repository depending on the options chosen</em><ul>
+<li><strong>--soft &lt;sha&gt;</strong> <em>undo commit history</em></li>
+<li><strong>--mixed &lt;sha&gt;</strong> <em>undo commit history and staging index</em></li>
+<li><strong>--hard &lt;sha&gt;</strong> <em>undo commit history, staging index and file system</em></li>
+</ul>
+</li>
+<li><strong>git clone</strong> <em>clone a remote repository</em></li>
+<li><strong>git checkout <branchname></branchname></strong> <em>checkout a new branch</em><ul>
+<li><strong>git checkout -b <branchname></branchname></strong>  <em>create and checkout a new branch</em></li>
+</ul>
+</li>
+<li><strong>git push</strong> <em>push your committed changes to the remote repository</em><ul>
+<li><strong>-u origin <branchname></branchname></strong> <em>set the remote repository branch you want to commit to</em></li>
+</ul>
+</li>
+<li><strong>git pull</strong> <em>download changes from remote repository</em></li>
 </ul>
 
                                 
@@ -473,14 +503,10 @@
 
             
                 
-                <a href="../extras/readthedocs.md" class="navigation navigation-prev " aria-label="Previous page: ReadTheDocs">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: References">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="commandsummary.html" class="navigation navigation-next " aria-label="Next page: Git command summary">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -489,7 +515,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"References","level":"1.6","depth":1,"next":{"title":"Git command summary","level":"1.6.1","depth":2,"path":"refs/commandsummary.md","ref":"refs/commandsummary.md","articles":[]},"previous":{"title":"ReadTheDocs","level":"1.5.3","depth":2,"path":"extras/readthedocs.md","ref":"extras/readthedocs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"refs/README.md","mtime":"2018-02-19T16:22:02.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git command summary","level":"1.6.1","depth":2,"previous":{"title":"References","level":"1.6","depth":1,"path":"refs/README.md","ref":"refs/README.md","articles":[{"title":"Git command summary","level":"1.6.1","depth":2,"path":"refs/commandsummary.md","ref":"refs/commandsummary.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"refs/commandsummary.md","mtime":"2018-03-04T17:17:07.128Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

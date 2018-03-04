@@ -123,7 +123,7 @@
                 <a href="../intro/gitinstall.html">
             
                     
-                    Installing Git and Hub
+                    Installing Git
             
                 </a>
             
@@ -131,9 +131,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../intro/clibasics.md">
+        <li class="chapter " data-level="1.2.2" data-path="../intro/introcli.html">
             
-                <span>
+                <a href="../intro/introcli.html">
             
                     
                     Command-line Basics
@@ -215,12 +215,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="commandsummary.html">
+        <li class="chapter " data-level="1.3.4" data-path="disaster.html">
             
-                <a href="commandsummary.html">
+                <a href="disaster.html">
             
                     
-                    Git command summary
+                    Recovering from disaster
             
                 </a>
             
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../github/README.md">
+        <li class="chapter " data-level="1.4" data-path="../github/">
             
-                <span>
+                <a href="../github/">
             
                     
                     GitHub
@@ -260,9 +260,22 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../fixes/simple.md">
+        <li class="chapter " data-level="1.4.2" data-path="../github/cloneandfork.html">
             
-                <span>
+                <a href="../github/cloneandfork.html">
+            
+                    
+                    Cloning and forking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../github/simple.html">
+            
+                <a href="../github/simple.html">
             
                     
                     Simple Fixes
@@ -273,9 +286,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../fixes/pullrequests.md">
+        <li class="chapter " data-level="1.4.4" data-path="../github/pullrequest.html">
             
-                <span>
+                <a href="../github/pullrequest.html">
             
                     
                     Pull Requests
@@ -305,7 +318,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../extras/gitlab.md">
+        <li class="chapter " data-level="1.5.1" data-path="../extras/gh-pages.md">
+            
+                <span>
+            
+                    
+                    gh-pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../extras/gitlab.md">
             
                 <span>
             
@@ -318,7 +344,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../extras/readthedocs.md">
+        <li class="chapter " data-level="1.5.3" data-path="../extras/readthedocs.md">
             
                 <span>
             
@@ -346,6 +372,25 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../refs/commandsummary.html">
+            
+                <a href="../refs/commandsummary.html">
+            
+                    
+                    Git command summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -397,17 +442,17 @@
                                 <h1 id="using-git">Using Git</h1>
 <p>This chapter will take you through first-time git setup steps, creating your first local repository, and the basics of using version control locally to record your own changes. So firstly, let&apos;s talk about what &quot;version control&quot; means, and specifically what git-style version control means.</p>
 <h2 id="a-brief-guide-to-version-control">A brief guide to version control</h2>
-<p>Version Control Systems (VCS) are a way of recording changes to a file or files over time, with the ability to go back to a specific version of a file, or all the files in a project, at a later date. Changes to files, or patches, are stored within the project, or repository, and a file can be restored to a specific point in time by adding up the relevant patches.</p>
-<p>Centralised VCS such as Subversion allow multiple people to work on a repository simultaneously. They store the repository and all its changes on a single server and each end-user or client simply downloads or checkes out the latest version or snapshot to use on their local computer. This means that the central server is a single point of failure. Losing that means losing the entire history of the project. The latest snapshot is still available on the client computers, but the record of all the changes has been lost.</p>
-<p>Modern Distributed VCS, such as Git or Mercurial, get around this single point of failure by insisting that each end-user or client mirrors the entire repository onto their local computer. Each mirror, or clone, of the central repository can be used to restore the central one in the event of a failure and each client can have their own workflow for interacting with the central repository.</p>
+<p>Version Control Systems (VCS) are a way of recording changes to a file or files over time, with the ability to go back to a specific version of a file, or all the files in a project, at a later date. Changes to files, or patches, are stored within the project, or repository, and a file can be restored to a specific point in time by iteratively applying the relevant patches.</p>
+<p><strong>Centralised</strong> VCS such as Subversion allow multiple people to work on a repository simultaneously. They store the repository and all its changes on a single server and each end-user or client simply downloads or checks out the latest version or snapshot to use on their local computer. This means that the central server is a single point of failure. Losing that means losing the entire history of the project. The latest snapshot is still available on the client computers, but the record of all the changes has been lost.</p>
+<p>Modern <strong>Distributed</strong> VCS, such as Git or Mercurial, get around this single point of failure by insisting that each end-user or client mirrors the entire repository onto their local computer. Each mirror, or clone, of the central repository can be used to restore the central one in the event of a failure and each client can have their own workflow for interacting with the central repository.</p>
 <h2 id="why-git">Why Git</h2>
 <p>Git is not the only Distributed VCS tool out there, but it has become the most popular. It was always built with speed in mind, and the ability to efficiently handle large projects.</p>
 <p>It is different to Subversion and other Centralised VCS because rather than storing each change as a patch to a specific file, it treats each change as a snapshot of the whole repository file structure. If a file in the structure hasn&apos;t changed, then Git simply stores a link back to the previous identical file.</p>
-<p><strong>Old-School Centralised VCS:</strong></p>
-<p><img src="../images/oldschool_vcs.png" alt="Oldschool VCS" title="Images used under CC BY 3.0 from https://github.com/git/git-scm.com"></p>
-<p><strong>New-School Distributed VCS like Git:</strong></p>
-<p><img src="../images/newschool_vcs.png" alt="Oldschool VCS" title="Images used under CC BY 3.0 from https://github.com/git/git-scm.com"></p>
 <p>Finally, nearly every Git operation is local, making it ideal for long train journeys!</p>
+<h3 id="old-school-centralised-vcs">Old-School Centralised VCS:</h3>
+<p><img src="../images/oldschool_vcs.png" alt="Oldschool VCS" title="Images used under CC BY 3.0 from https://github.com/git/git-scm.com"></p>
+<h3 id="new-school-distributed-vcs-like-git">New-School Distributed VCS like Git:</h3>
+<p><img src="../images/newschool_vcs.png" alt="Oldschool VCS" title="Images used under CC BY 3.0 from https://github.com/git/git-scm.com"></p>
 
                                 
                                 </section>
@@ -451,7 +496,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Using Git","level":"1.3","depth":1,"next":{"title":"Getting set up","level":"1.3.1","depth":2,"path":"git/gitsetup.md","ref":"git/gitsetup.md","articles":[]},"previous":{"title":"Starting Git","level":"1.2.3","depth":2,"path":"intro/gitcli.md","ref":"intro/gitcli.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/README.md","mtime":"2016-06-08T17:40:49.011Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-19T17:05:49.085Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Using Git","level":"1.3","depth":1,"next":{"title":"Getting set up","level":"1.3.1","depth":2,"path":"git/gitsetup.md","ref":"git/gitsetup.md","articles":[]},"previous":{"title":"Starting Git","level":"1.2.3","depth":2,"path":"intro/gitcli.md","ref":"intro/gitcli.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/README.md","mtime":"2018-02-26T17:11:49.659Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
