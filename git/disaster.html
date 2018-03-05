@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../github/" />
+    <link rel="next" href="../extras/gitlab.md" />
     
     
-    <link rel="prev" href="stages.html" />
+    <link rel="prev" href="../extras/README.md" />
     
 
     </head>
@@ -215,19 +215,6 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4" data-path="disaster.html">
-            
-                <a href="disaster.html">
-            
-                    
-                    Recovering from disaster
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -318,12 +305,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../extras/gh-pages.md">
+        <li class="chapter active" data-level="1.5.1" data-path="disaster.html">
             
-                <span>
+                <a href="disaster.html">
             
                     
-                    gh-pages
+                    Recovering from disaster
             
                 </a>
             
@@ -337,19 +324,6 @@
             
                     
                     Gitlab
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.3" data-path="../extras/readthedocs.md">
-            
-                <span>
-            
-                    
-                    ReadTheDocs
             
                 </a>
             
@@ -441,7 +415,7 @@
                                 
                                 <h1 id="recovering-from-disaster">Recovering from disaster</h1>
 <p>Git provides a number of ways of recovering from disaster, aka undoing changes to your repository. We won&apos;t go into too much detail here as it&apos;s all rather more complicated than we have time for!</p>
-<p>In all cases, you will need to know the SHA ID for the a commit, found by running the <code>git log</code> command. You can get a shorter (7 character) version of the SHA, which is equally valid, by appending <code>--abbrev-commit</code> to the command, as follows:</p>
+<p>In all cases, you will need to know the SHA-1 checksum for the a commit, found by running the <code>git log</code> command. You can get a shorter (7 character) version of the checksum or hash, which is equally valid, by appending <code>--abbrev-commit</code> to the command, as follows:</p>
 <pre><code>git log --abbrev-commit
 </code></pre><h2 id="git-checkout">git checkout</h2>
 <p>This allows you to <strong>view</strong> the repository at a particular point in time, or commit:</p>
@@ -457,10 +431,10 @@ git checkout -b newbranchname
 <pre><code>git clean -n
 </code></pre><p><em>Note that <code>-n</code> can be used after most git commands to give you a dry-run of what the command will actually do</em></p>
 <h2 id="git-revert">git revert</h2>
-<p>This allows you to undo changes to your commit history by adding a new commit, which is equivalent to the &quot;inverse&quot; of the one referred to in the command:</p>
+<p>This allows you to undo changes to your commit history back to the specified SHA-1 checksum by adding a new commit, which is equivalent to the &quot;inverse&quot; of the one referred to in the command:</p>
 <pre><code>git revert &lt;sha&gt;
 </code></pre><h2 id="git-reset">git reset</h2>
-<p>This undoes changes to your commit history but also modifies the file system and staging index, depending on the way git reset is invoked.</p>
+<p>This undoes changes to your commit history back to the specified SHA-1 checksum, but also modifies the file system and staging index, depending on the way git reset is invoked.</p>
 <table>
 <thead>
 <tr>
@@ -512,12 +486,12 @@ git checkout -b newbranchname
 
             
                 
-                <a href="stages.html" class="navigation navigation-prev " aria-label="Previous page: The three stages of Git">
+                <a href="../extras/README.md" class="navigation navigation-prev " aria-label="Previous page: Extras">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../github/" class="navigation navigation-next " aria-label="Next page: GitHub">
+                <a href="../extras/gitlab.md" class="navigation navigation-next " aria-label="Next page: Gitlab">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -528,7 +502,7 @@ git checkout -b newbranchname
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Recovering from disaster","level":"1.3.4","depth":2,"next":{"title":"GitHub","level":"1.4","depth":1,"path":"github/README.md","ref":"github/README.md","articles":[{"title":"GitHub","level":"1.4.1","depth":2,"path":"github/github.md","ref":"github/github.md","articles":[]},{"title":"Cloning and forking","level":"1.4.2","depth":2,"path":"github/cloneandfork.md","ref":"github/cloneandfork.md","articles":[]},{"title":"Simple Fixes","level":"1.4.3","depth":2,"path":"github/simple.md","ref":"github/simple.md","articles":[]},{"title":"Pull Requests","level":"1.4.4","depth":2,"path":"github/pullrequest.md","ref":"github/pullrequest.md","articles":[]}]},"previous":{"title":"The three stages of Git","level":"1.3.3","depth":2,"path":"git/stages.md","ref":"git/stages.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/disaster.md","mtime":"2018-03-04T17:17:29.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T19:00:22.981Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Recovering from disaster","level":"1.5.1","depth":2,"next":{"title":"Gitlab","level":"1.5.2","depth":2,"path":"extras/gitlab.md","ref":"extras/gitlab.md","articles":[]},"previous":{"title":"Extras","level":"1.5","depth":1,"path":"extras/README.md","ref":"extras/README.md","articles":[{"title":"Recovering from disaster","level":"1.5.1","depth":2,"path":"git/disaster.md","ref":"git/disaster.md","articles":[]},{"title":"Gitlab","level":"1.5.2","depth":2,"path":"extras/gitlab.md","ref":"extras/gitlab.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/disaster.md","mtime":"2018-03-05T18:54:00.690Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-05T19:58:11.115Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
