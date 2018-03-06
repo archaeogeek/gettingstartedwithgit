@@ -25,24 +25,22 @@ This will open up the file in a text editor. Make any changes you wish, and ensu
 
 Once you're happy with the changes, in the **Propose file change** section below the text editor, add a title and a reason for the commit. 
 
-![GitHub edit](../images/github_proposechange.png)
+![GitHub edit 1](../images/github_proposechange.png)
 
 Finally, when you're happy, click the green "Propose file change" button.
 
 Proposing the file change will take you to a Pull Request review window where you can check your changes against the original file. If it all looks good, then click the green "Create pull request" button. 
 
-![GeoNetwork Typo #4](../images/geonetwork_typo4.png)
-
-This will give you one further chance to change your commit message, then hit the final "Create pull request" button and your pull request will be submitted.
-
-![GeoNetwork Typo #5](../images/geonetwork_typo5.png)
+![GitHub edit 2](../images/github_edit2.png)
 
 The next page checks whether there are any conflicts with the base branch. You are given one final chance to comment on the pull request but note this is a comment to the owner and not part of the request itself.
 
-![GitHub Pull Request #3](../images/github_pullrequest3.png)
+![GitHub edit 3](../images/github_edit3.png)
 
-If the owner of the repository is happy with the change then they will merge it with the base branch. If they are not happy they may write a comment back to you asking you for further information or changes.
+The owner of the repository will receive an email notifying them of the pull request, with options to view and merge.  
+
+![Pull Request notification](../images/github_notification.png)
 
 
-
+If they are happy with the change then they will merge it with the base branch. If they are not happy they may write a comment back to you asking you for further information or changes.
 

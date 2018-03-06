@@ -2,7 +2,7 @@
 
 Git provides a number of ways of recovering from disaster, aka undoing changes to your repository. We won't go into too much detail here as it's all rather more complicated than we have time for!
 
-In all cases, you will need to know the SHA ID for the a commit, found by running the `git log` command. You can get a shorter (7 character) version of the SHA, which is equally valid, by appending `--abbrev-commit` to the command, as follows:
+In all cases, you will need to know the SHA-1 checksum for the a commit, found by running the `git log` command. You can get a shorter (7 character) version of the checksum or hash, which is equally valid, by appending `--abbrev-commit` to the command, as follows:
 
     git log --abbrev-commit
 
@@ -33,13 +33,13 @@ This allows you to "tidy" a repository by deleting untracked files. To see what 
 
 ## git revert
 
-This allows you to undo changes to your commit history by adding a new commit, which is equivalent to the "inverse" of the one referred to in the command:
+This allows you to undo changes to your commit history back to the specified SHA-1 checksum by adding a new commit, which is equivalent to the "inverse" of the one referred to in the command:
 
     git revert <sha>
 
 ## git reset
 
-This undoes changes to your commit history but also modifies the file system and staging index, depending on the way git reset is invoked.
+This undoes changes to your commit history back to the specified SHA-1 checksum, but also modifies the file system and staging index, depending on the way git reset is invoked.
 
 | Command | Operation |
 |---------|-----------|

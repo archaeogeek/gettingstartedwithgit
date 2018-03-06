@@ -10,14 +10,14 @@
 * __git mv__ _rename files in filesystem and repository_
 * __git rm__ _remove files in filesystem and repository_
 	* __--cached__ _remove files from repository but not filesystem_
-* __git checkout &lt;sha&gt;__ _checkout a previous commit referenced by &lt;sha&gt;_
+* __git checkout &lt;sha&gt;__ _checkout a previous commit referenced by the specified SHA-1 checksum_
 *  __git clean__ delete untracked files from your repository
     * __-n__ do a dry-run without actually deleting
 * __git revert &lt;sha&gt;__ _undo changes to a commit history by creating a new commit, which is the inverse of &lt;sha&gt;_
 * __git reset__ _Undo changes to your repository depending on the options chosen_
-    * __--soft &lt;sha&gt;__ _undo commit history_
-    * __--mixed &lt;sha&gt;__ _undo commit history and staging index_
-    * __--hard &lt;sha&gt;__ _undo commit history, staging index and file system_
+    * __--soft &lt;sha&gt;__ _undo commit history back to the specified SHA-1 checksum_
+    * __--mixed &lt;sha&gt;__ _undo commit history and staging index back to the specified SHA-1 checksum_
+    * __--hard &lt;sha&gt;__ _undo commit history, staging index and file system back to the specified SHA-1 checksum_
 * __git clone__ _clone a remote repository_
 * __git checkout <branchname>__ _checkout a new branch_
 	* __git checkout -b <branchname>__  _create and checkout a new branch_

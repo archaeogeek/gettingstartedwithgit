@@ -2,9 +2,9 @@
 
 **See online version at [archaeogeek.github.io/gettingstartedwithgit](http://archaeogeek.github.io/gettingstartedwithgit/)**
 
-This workshop is inspired by the "Don't be afraid to commit" workshops run at various PyCon events, and documented at [readthedocs](http://dont-be-afraid-to-commit.readthedocs.io/en/latest/index.html#) but with a focus on getting you going with Git and GitHub (*), and submitting minor fixes to existing projects. We'll also look at other repositories such as GitLab, and at integration with packages such as ReadTheDocs, which you might come across when getting into open source.
+This workshop is inspired by the "Don't be afraid to commit" workshops run at various PyCon events, and documented at [readthedocs](http://dont-be-afraid-to-commit.readthedocs.io/en/latest/index.html#) but with a focus on getting you going with Git and GitHub (*), and submitting minor fixes to existing projects. We'll also look briefly at your methods for recovering from diaster.
 
-\* Other repositories exist
+\* Other repositories do exist
 
 # The purpose of the workshop
 
@@ -15,8 +15,7 @@ We'll hopefully get you in a position where you're familiar with the basic conce
 * Hands on- how to set up and use Git and GitHub
 * Hands on- how to submit brief documentation fixes to projects on GitHub
 * Hands on- how to submit a pull request to a project hosted on GitHub
-* Intro- what is GitLab and how is it different to GitHub?
-* Intro- what is ReadTheDocs and how do I contribute documentation fixes to it?
+* Extras- how to recover from disaster
 
 # What we're not covering
 

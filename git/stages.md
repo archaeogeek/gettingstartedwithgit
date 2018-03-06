@@ -51,7 +51,7 @@ Also, running the `git log` command will give you a nicely formatted record of y
 
 ![Git Log](../images/git_log.png)
 
-**Note that long string of characters and numbers. That's an unique ID, or SHA, for that particular commit. You might sometimes need to refer to this!**
+**Note that long string of characters and numbers. That's an unique ID, or SHA-1 checksum, for that particular commit. You might sometimes need to refer to this!**
 
 Let's make a change to the file so we can try out some other commands...
 

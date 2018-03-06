@@ -43,7 +43,7 @@ Make your change, commit it (adding a clear and concise commit message) and push
 
 **Again, to avoid confusion in this workshop, only make changes to the file with the number you were allocated, otherwise your request may be rejected!**
 
-##Making changes on GitHub
+##Submitting pull request on GitHub
 
 Navigate to the original GitHub repository, and you should see a big green button marked "Compare and pull request". 
 
@@ -53,13 +53,9 @@ Click that button and you will be taken to a page giving you the opportunity to 
 
 ![GitHub Pull Request #2](../images/github_pullrequest2.png)
 
-Write a clear and concise subject and description for your change- as the owner of the repository will use this to decide whether to accept your change. Review your changes and when you are happy click the green "Create pull request button".
+Write a clear and concise subject and description for your change- as the owner of the repository will use this to decide whether to accept your change. Review your changes and when you are happy then click the green "Create pull request" button. 
 
-The next page checks whether there are any conflicts with the base branch. You are given one final chance to comment on the pull request but note this is a comment to the owner and not part of the request itself.
-
-![GitHub Pull Request #3](../images/github_pullrequest3.png)
-
-If the owner of the repository is happy with the change then they will merge it with the base branch. If they are not happy they may write a comment back to you asking you for further information or changes.
+The rest of the procedure is the same as for editing a file directly on GitHub, the change is reviewed for conflicts against the base branch, the owner gets an email notification, and if they are happy the merge your change.
 
 ##Housekeeping
 
