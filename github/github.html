@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Installing Git · GitBook</title>
+        <title>GitHub · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="introcli.html" />
+    <link rel="next" href="cloneandfork.html" />
     
     
     <link rel="prev" href="./" />
@@ -104,9 +104,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../intro/">
             
-                <a href="./">
+                <a href="../intro/">
             
                     
                     Prerequisites
@@ -118,9 +118,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="gitinstall.html">
+        <li class="chapter " data-level="1.2.1" data-path="../intro/gitinstall.html">
             
-                <a href="gitinstall.html">
+                <a href="../intro/gitinstall.html">
             
                     
                     Installing Git
@@ -131,9 +131,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="introcli.html">
+        <li class="chapter " data-level="1.2.2" data-path="../intro/introcli.html">
             
-                <a href="introcli.html">
+                <a href="../intro/introcli.html">
             
                     
                     Command-line Basics
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="gitcli.html">
+        <li class="chapter " data-level="1.2.3" data-path="../intro/gitcli.html">
             
-                <a href="gitcli.html">
+                <a href="../intro/gitcli.html">
             
                     
                     Starting Git
@@ -220,9 +220,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../github/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../github/">
+                <a href="./">
             
                     
                     GitHub
@@ -234,9 +234,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../github/github.html">
+        <li class="chapter active" data-level="1.4.1" data-path="github.html">
             
-                <a href="../github/github.html">
+                <a href="github.html">
             
                     
                     GitHub
@@ -247,9 +247,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../github/cloneandfork.html">
+        <li class="chapter " data-level="1.4.2" data-path="cloneandfork.html">
             
-                <a href="../github/cloneandfork.html">
+                <a href="cloneandfork.html">
             
                     
                     Cloning and forking
@@ -260,9 +260,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../github/simple.html">
+        <li class="chapter " data-level="1.4.3" data-path="simple.html">
             
-                <a href="../github/simple.html">
+                <a href="simple.html">
             
                     
                     Simple Fixes
@@ -273,9 +273,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../github/pullrequest.html">
+        <li class="chapter " data-level="1.4.4" data-path="pullrequest.html">
             
-                <a href="../github/pullrequest.html">
+                <a href="pullrequest.html">
             
                     
                     Pull Requests
@@ -366,7 +366,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Installing Git</a>
+        <a href=".." >GitHub</a>
     </h1>
 </div>
 
@@ -381,29 +381,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="installing-git">Installing Git</h1>
-<h2 id="linux">Linux</h2>
-<p>The easiest way to install Git on a linux operating system is to use your package management tool, such as apt (for Debian-based systems such as Ubuntu) or yum (for Fedora). </p>
-<p>See <a href="https://git-scm.com/download/linux" target="_blank">Download for Linux and Unix</a>.</p>
-<p><em>Note that &quot;git-all&quot; is a meta-package including git and all of it&apos;s subpackages, such as emacs support, a web interface and so on. See <a href="https://packages.debian.org/sid/git-all" target="_blank">git-all</a> for details.</em> </p>
-<h2 id="windows">Windows</h2>
-<p>There are two good options for installing Git on windows:</p>
-<h3 id="git-for-windows">Git for Windows</h3>
-<p>This project focuses on providing the full Git featureset for windows users in a lightweight interface. You can find it at <a href="https://git-for-windows.github.io/" target="_blank">git-for-windows</a>.</p>
-<h3 id="github-desktop">GitHub Desktop</h3>
-<p>This is more focused on integration with GitHub, and comes with a flashy user interface as well as a solid set of tools. You can find it at <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a>. In my experience this is slower and more resource-heavy than Git for Windows.</p>
-<p><em>Note that both installers above include a graphical user interface but we&apos;re going to concentrate on using the command-line version as it&apos;s quicker, in many ways easier, and certainly uses less system resources.</em></p>
-<h2 id="mac-osx">Mac OSX</h2>
-<p>There are several ways of installing Git on a Mac:</p>
-<h3 id="via-xcode-command-line-tools">Via Xcode Command Line Tools</h3>
-<p>You may already have this installed. Try opening Terminal and typing:</p>
-<pre><code>git
-</code></pre><p>If you haven&apos;t got it installed already then it will prompt you to install it.</p>
-<h3 id="via-the-git-website">Via the Git website</h3>
-<p>This version will provide you with the most recent maintained (eg stable) build of git and will likely be more up to date than that provided as part of Xcode. Download it from <a href="https://git-scm.com/download/mac" target="_blank">git-scm.com</a>.</p>
-<h3 id="github-desktop">GitHub Desktop</h3>
-<p>GitHub provide a mac version of their GitHub desktop product. You can find it at <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a>.</p>
-<p><em>Note that both installers above include a graphical user interface but we&apos;re going to concentrate on using the command-line version as it&apos;s quicker, in many ways easier, and certainly uses less system resources.</em></p>
+                                <h1 id="working-with-remote-repositories">Working with remote repositories</h1>
+<p>So now we know how to work with repositories on our local file system. How do we host our repository on GitHub?</p>
+<p>Online versions of repositories are generally known as <strong>remotes</strong>, and the process of uploading code to a remote is known as a <strong>push</strong>.</p>
+<p>The basic workflow is:</p>
+<ul>
+<li>Create a new repository for your code on GitHub</li>
+<li>Add this as a remote for your local repository</li>
+<li>Make changes to your local repository as usual</li>
+<li>Upload or push your changes to the remote</li>
+</ul>
+<h2 id="creating-a-repository-on-github">Creating a repository on GitHub</h2>
+<p>First of all, you need to create an account on GitHub and sign in at <a href="http://github.com" target="_blank">github.com</a>.</p>
+<p>The current GitHub sign in page looks like this:</p>
+<p><img src="../images/github_sigin.png" alt="GitHub"></p>
+<p><strong>Tip: Enable two-factor authentication for better security</strong></p>
+<p>If you&apos;re comfortable with SSH then add your SSH key to your account profile for secure committing without your password. For the purposes of this tutorial we will use https instead.</p>
+<p>Go to the repository tab on your home page and click the green &quot;New&quot; button.</p>
+<p><img src="../images/github_newrepo.png" alt="GitHub New Repo"></p>
+<p>Give your repository a useful name and description. You&apos;ll need to leave it as a public repository (private repositories are currently only available with a paid-for plan). For the purposes of this workshop, leave the option to initialise the repository with a README unticked, and don&apos;t select a .gitignore file or license. Then click the big green &quot;Create Repository&quot; button. </p>
+<p><img src="../images/github_newrepo2.png" alt="GitHub New Repo #2"></p>
+<p>The final stage provides you with the command line instructions you need for adding the GitHub repository as a remote for your local copy. </p>
+<p><em>Note the option to switch between ssh and https, and how this changes the address for the repository. Stick with https for now</em></p>
+<p>We&apos;ll add this repository as a remote for the repository we created earlier, so follow the instructions in the second box, titled &quot;... or push an existing repository from the command line&quot;.</p>
+<p><img src="../images/github_newrepo3.png" alt="GitHub New Repo #3"></p>
+<p>In our repository folder that we created earlier, type the following commands, substituting your GitHub username and the repository name into the appropriate places:</p>
+<pre><code>git remote add origin https://github.com/&lt;yourusename&gt;/&lt;yourreponame&gt;.git
+git push -u origin master
+</code></pre><p><em>The term &quot;master&quot; refers to the default or master branch in the repository. Branches are effectively self-contained copies of the files in the project that can be merged together when required. They are often used for development and stable versions of source code. We&apos;ll discuss them briefly later but see the <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell" target="_blank">documentation</a> for more detail.</em></p>
+<p>Go back to <a href="repository.html">Creating your first local repository</a> and practice making some more changes to your local repository, then use <strong>git push</strong> to push them to the remote repository. Now you might see the value of good commit messages, as these are fully visible in your repository!</p>
+<p><em>Note that once you have set the master branch you don&apos;t need to use the full &quot;-u origin master&quot; statement. Just &quot;git push&quot; will do</em></p>
 
                                 
                                 </section>
@@ -431,12 +438,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Prerequisites">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: GitHub">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="introcli.html" class="navigation navigation-next " aria-label="Next page: Command-line Basics">
+                <a href="cloneandfork.html" class="navigation navigation-next " aria-label="Next page: Cloning and forking">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -447,7 +454,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installing Git","level":"1.2.1","depth":2,"next":{"title":"Command-line Basics","level":"1.2.2","depth":2,"path":"intro/introcli.md","ref":"intro/introcli.md","articles":[]},"previous":{"title":"Prerequisites","level":"1.2","depth":1,"path":"intro/README.md","ref":"intro/README.md","articles":[{"title":"Installing Git","level":"1.2.1","depth":2,"path":"intro/gitinstall.md","ref":"intro/gitinstall.md","articles":[]},{"title":"Command-line Basics","level":"1.2.2","depth":2,"path":"intro/introcli.md","ref":"intro/introcli.md","articles":[]},{"title":"Starting Git","level":"1.2.3","depth":2,"path":"intro/gitcli.md","ref":"intro/gitcli.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"intro/gitinstall.md","mtime":"2018-03-04T15:32:48.769Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-08T16:36:55.216Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GitHub","level":"1.4.1","depth":2,"next":{"title":"Cloning and forking","level":"1.4.2","depth":2,"path":"github/cloneandfork.md","ref":"github/cloneandfork.md","articles":[]},"previous":{"title":"GitHub","level":"1.4","depth":1,"path":"github/README.md","ref":"github/README.md","articles":[{"title":"GitHub","level":"1.4.1","depth":2,"path":"github/github.md","ref":"github/github.md","articles":[]},{"title":"Cloning and forking","level":"1.4.2","depth":2,"path":"github/cloneandfork.md","ref":"github/cloneandfork.md","articles":[]},{"title":"Simple Fixes","level":"1.4.3","depth":2,"path":"github/simple.md","ref":"github/simple.md","articles":[]},{"title":"Pull Requests","level":"1.4.4","depth":2,"path":"github/pullrequest.md","ref":"github/pullrequest.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github/github.md","mtime":"2016-06-13T10:18:50.153Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-08T16:36:55.216Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
