@@ -16,6 +16,5 @@
     * [Simple Fixes](github/simple.md)
     * [Pull Requests](github/pullrequest.md)
 * [Extras](extras/README.md)
-    * [Recovering from disaster](git/disaster.md)
-* [References](refs/README.md)
-    * [Git command summary](refs/commandsummary.md)
+    * [Recovering from disaster](extras/disaster.md)
+    * [Git command summary](extras/commandsummary.md)
